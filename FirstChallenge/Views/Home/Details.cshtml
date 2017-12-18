@@ -1,0 +1,14 @@
+﻿@model FirstChallenge.Models.ComicBook
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details About @Html.DisplayFor(model => model.ComicTitle) #@Html.DisplayFor(model => model.EpisodeNumber)</h2>
+<h4>Episode Title: @Html.DisplayFor(model => model.EpisodeTitle)</h4>
+<b>Starring: </b> @String.Join(", ",Model.Characters.Select(p => p.Name))
+
+<hr />
+<p>
+    @Html.ActionLink("Back to All Comics", "Index")
+</p>
